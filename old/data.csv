@@ -1,0 +1,18 @@
+fname,lname,phone,email,role,memberyears,bio1,bio2,image
+Christie,Watson,,Christie.Watson@oxfordschools.org,School Mentor,10,Teacher Mentor for 10 years PLTW Teacher,,christiewatson
+Ian,Haden,586 601 7850,ian@haden.id.au,Coach Electrical and Programming,2,Electrical Engineer at GM,,ianhaden
+Ken,Koscica,248 762 6144,koscica18@yahoo.com,Coach Mechanical,3,Mechanial Stuff,,kenkoscica
+Kris,Haselton,,khaselton@charter.net,Coach Organiser,3,Lots of Stuff,,krishaselton
+Zoe,Haden,,zoe@haden.id.au,Programmer,2,Zoe Plays the trumpet in Band and has been doing Robotics for 2 years with the oxford robotics team,,zoehaden
+GName1,GSName1,,email1@somewhere.com,Programmer,2,Been on the team for ages,,girl1
+GName2,GSName2,,email2@somewhere.com,Programmer,2,Been on the team for ages,,girl2
+GName3,GSName3,,email3@somewhere.com,Builder,2,Been on the team for ages,,girl3
+GName4,GSName4,,email4@somewhere.com,CAD,2,Been on the team for ages,,girl1
+GName5,GSName5,,email5@somewhere.com,Programmer,2,Been on the team for ages,,girl2
+GName6,GSName6,,email6@somewhere.com,Report Writer,2,Been on the team for ages,,girl3
+BName1,BSName1,,email1@somewhere.com,Programmer,2,Been on the team for ages,,boy1
+BName2,BSName2,,email2@somewhere.com,CAD,2,Been on the team for ages,,boy2
+BName3,BSName3,,email3@somewhere.com,Builder,2,Been on the team for ages,,boy3
+BName4,BSName4,,email4@somewhere.com,Builder,2,Been on the team for ages,,boy1
+BName5,BSName5,,email5@somewhere.com,Programmer,2,Been on the team for ages,,boy2
+BName6,BSName6,,email6@somewhere.com,Electrical,2,Been on the team for ages,,boy3
