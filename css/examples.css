@@ -80,7 +80,7 @@ p{
 body{
 	font-family: arial,helvetica;
 	color: #333;
-	color: rgba(0,0,0,0.5);
+	color: rgba(255,255,255,0.5);
 }
 .wrap{
 	margin-left: auto;
@@ -754,14 +754,27 @@ body{
     color:#FFF;
 }
 
-.intro-text  p{
+.intro-text p{
     font-size: 0.7em;
     color: #fff;
     text-align: justify;
     padding-top: 20px;
     
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 10px;
+}
+
+.chain-text  {
+    font-size: 0.7em;
+    color: #fff;
+    text-align: right;
+    padding-left: 2px;
+    padding-right: 10px;
+}
+.chain-text  p{
+    font-size: 0.7em;
+    color: #fff;
+    padding-right: 10px;
 }
 hr.star-light {
     border-color: #fff;
