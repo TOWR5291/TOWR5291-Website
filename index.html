@@ -669,25 +669,333 @@
                 <div class="row">
                     <div class="col-md-2">
                     </div>
-                    <div class="col-md-8  bluebox">
-                        <div class="intro-text">
-                            <span class="name">Building Team</span>
-                            <img class="img-responsive img-logo" src="img/1.png" alt="">
-                            <hr class="star-light">
-                        </div>
-                        <div class="intro-text">
-                            <p><span>Builders</span></p>
-                        </div>
+                    <div class="col-md-8 bluebox">
+                        <form name="chain_length_form" class="form-horizontal" action="">
+                        <fieldset>
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="intro-text">
+                                        <span class="name">Chain Length Calculator</span>
+                                        <img class="img-responsive img-logo" src="img/sprockets-center-to-center-distance.png" alt="">
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                </div>   
+                            </div>      
+                            
+                            <!-- Select Basic -->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="chainsize" class="col-md-4 control-label">Chain Size (Pitch)</label>
+                                
+                                <div class="col-md-4">
+                                    <select name="pitch" class="dropdownbox form-control" id="chainsize">
+                                        <option value=".25">#25 (1/4&quot;)</option>
+                                        <option value=".315">T8F (8mm)</option>
+                                        <option value=".375">#35 (3/8&quot;)</option>
+                                        <option value=".50">#40 (1/2&quot;)</option>
+                                        <option value=".50">#41 (1/2&quot;)</option>
+                                        <option value=".50">#410 (1/2&quot;)</option>
+                                        <option value=".50">#415 (1/2&quot;)</option>
+                                        <option value=".50">#420 (1/2&quot;)</option>
+                                        <option value=".50">#428 (1/2&quot;)</option>
+                                    </select>                          
+                                </div>
 
+                                 <div class="col-md-2">
+                                </div>
+                            </div> 
+                            
+                            <!-- Text input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="drive_teeth" class="col-md-4 control-label">Motor Sprocket Teeth</label>                                
+                      
+                                <div class="col-md-4">
+                                    <input name="drive_teeth" id="drive_teeth" placeholder="16" value="16" class="form-control input-md">                                
+                                </div>                            
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+                            
+                            <!-- Text input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="driven_teeth" class="col-md-4 control-label">Wheel/Axle Sprocket Teeth </label>                                
+                      
+                                <div class="col-md-4">
+                                    <input name="driven_teeth" id="driven_teeth" placeholder="24" value="24" class="form-control input-md">                                
+                                </div>                            
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+                            
+                            <!-- Text input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="distance" class="col-md-4 control-label">Center to Center Distance (inches)</label>                                
+                      
+                                <div class="col-md-4">
+                                    <input name="distance" id="distance" placeholder="0" value="0" class="form-control input-md">                                
+                                </div>                            
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+                            
+                            <!-- Button input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+
+                                <div class="col-md-8 chain-text">
+                                    <button onClick="chain_length(this.form)" type="button" class="btn btn-primary btn-block btn-success">Calculate</button>                                
+                                </div>                              
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+                            
+                            <!-- Button input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+
+                                <div class="col-md-8 chain-text">
+                                    <button type="reset" class="btn btn-primary btn-block btn-danger">Reset</button>                                
+                                </div>                              
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+
+                            <!-- Text input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="links" class="col-md-4 control-label">(Inside and Outside Links)</label>                                
+                      
+                                <div class="col-md-4">
+                                    <input disabled="disabled"  name="links" id="links" placeholder="0" class="form-control input-md">                                
+                                </div>                            
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+                            
+                            <!-- Text input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="length" class="col-md-4 control-label">Chain Length </label>                                
+                      
+                                <div class="col-md-4">
+                                    <input disabled="disabled" name="length" id="length" placeholder="0" class="form-control input-md">                                
+                                </div>                            
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+                            
+                            <!-- Text input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="ratio" class="col-md-4 control-label">Reduction Ratio </label>                                
+                      
+                                <div class="col-md-4">
+                                    <input readonly name="ratio" id="ratio" placeholder="0" class="form-control input-md">                                
+                                </div>                            
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+
+
+                        </form>
                     </div>
                     <div class="col-md-2">
                     </div>
                 </div>
-
+                
             </div>        
         </div>
         
-        <div class='slide' data-anchor='main4'>
+            <div class='slide' data-anchor='main4'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-8 bluebox">
+                        <form name="chain_length_form" class="form-horizontal" action="">
+                        <fieldset>
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="intro-text">
+                                        <span class="name">Sprocket Center to Center Calculator</span>
+                                        <img class="img-responsive img-logo" src="img/sprockets-center-to-center-distance.png" alt="">
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                </div>   
+                            </div>      
+                            
+                            <!-- Select Basic -->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="chainsize" class="col-md-4 control-label">Sprocket Center to Center Calculator</label>
+                                
+                                <div class="col-md-4">
+                                    <select name="pitch" class="dropdownbox form-control" id="chainsize">
+                                        <option value=".25">#25 (1/4&quot;)</option>
+                                        <option value=".315">T8F (8mm)</option>
+                                        <option value=".375">#35 (3/8&quot;)</option>
+                                        <option value=".50">#40 (1/2&quot;)</option>
+                                        <option value=".50">#41 (1/2&quot;)</option>
+                                        <option value=".50">#410 (1/2&quot;)</option>
+                                        <option value=".50">#415 (1/2&quot;)</option>
+                                        <option value=".50">#420 (1/2&quot;)</option>
+                                        <option value=".50">#428 (1/2&quot;)</option>
+                                    </select>                          
+                                </div>
+
+                                 <div class="col-md-2">
+                                </div>
+                            </div> 
+                            
+                            <!-- Text input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="drive_teeth" class="col-md-4 control-label">Motor Sprocket Teeth</label>                                
+                      
+                                <div class="col-md-4">
+                                    <input name="drive_teeth" id="drive_teeth" placeholder="16" value="16" class="form-control input-md">                                
+                                </div>                            
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+                            
+                            <!-- Text input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="driven_teeth" class="col-md-4 control-label">Wheel/Axle Sprocket Teeth </label>                                
+                      
+                                <div class="col-md-4">
+                                    <input name="driven_teeth" id="driven_teeth" placeholder="24" value="24" class="form-control input-md">                                
+                                </div>                            
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+                            
+                            <!-- Text input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="links" class="col-md-4 control-label">Links of Chain (Count Links)</label>                                
+                      
+                                <div class="col-md-4">
+                                    <input name="links" id="links" placeholder="0" value="0" class="form-control input-md">                                
+                                </div>                            
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+                            
+                            <!-- Text input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="length" class="col-md-4 control-label">Chain Length (Inches)</label>                                
+                      
+                                <div class="col-md-4">
+                                    <input name="length" id="length" placeholder="0" value="0" class="form-control input-md">                                
+                                </div>                            
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+                            
+                            <!-- Button input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+
+                                <div class="col-md-8 chain-text">
+                                    <button onClick="center_distance(this.form)" type="button" class="btn btn-primary btn-block btn-success">Calculate</button>                                
+                                </div>                              
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+                            
+                            <!-- Button input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+
+                                <div class="col-md-8 chain-text">
+                                    <button type="reset" class="btn btn-primary btn-block btn-danger">Reset</button>                                
+                                </div>                              
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+
+                            <!-- Text input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="distance" class="col-md-4 control-label">Center to Center Distance</label>                                
+                      
+                                <div class="col-md-4">
+                                    <input readonly name="distance" id="distance" placeholder="0" disabled="disabled" class="form-control input-md">                                
+                                </div>                            
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+                            
+                            
+                            <!-- Text input-->
+                            <div class="form-group row">
+                                <div class="col-md-2">
+                                </div>
+                                
+                                <label for="ratio" class="col-md-4 control-label">Reduction Ratio </label>                                
+                      
+                                <div class="col-md-4">
+                                    <input name="ratio" id="ratio" placeholder="0" disabled="disabled" class="form-control">                                
+                                </div>                            
+                                <div class="col-md-2">
+                                </div>  
+                            </div> 
+
+
+                        </form>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+                
+            </div>        
+        </div>
+                
+        <div class='slide' data-anchor='main5'>
             <div class="container">
                 <div class="row">
                     <div class="col-md-2">
@@ -1059,6 +1367,6 @@
   ga('send', 'pageview');
 
 </script>    
-
+<script src="js/chain-length-calculator.js"></script>
 </body>
 </html>
